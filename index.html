@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SİTE 12</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-yellow-500">
+
+    <div class="fixed top-4 left-4 flex flex-row justify-center items-center gap-5">
+        <button id="yellowbtn" class="rounded bg-white hover:bg-black hover:text-white py-2 px-4 tracking-wider">Yellow</button>
+        <button id="bluebtn"  class="rounded bg-white hover:bg-black hover:text-white py-2 px-4 tracking-wider">Blue</button>
+    </div>
+
+    <div class="fixed top-4 right-4 flex flex-row justify-center items-center gap-5">
+        <button id="seabtn" class="rounded bg-white hover:bg-black hover:text-white py-2 px-4 tracking-wider">Sea</button>
+        <button id="mountainbtn"  class="rounded bg-white hover:bg-black hover:text-white py-2 px-4 tracking-wider">Mountain</button>
+    </div>
+    
+<header class="h-screen max-w-screen flex flex-col justify-center items-center">
+    
+    <div class="flex flex-col justify-center items-center">
+    <h1 class="text-white text-7xl text-bold">I am practicing Javascript</h1>
+    <p class="tracking-wider text-white text-xl text-center mt-4 w-8/12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto ab eum ut aut voluptas beatae, cum voluptatibus aspernatur delectus sequi quis minus debitis magnam deserunt accusamus, id corrupti, et ipsum!</p>
+    </div>
+
+
+</header>
+
+<script>
+
+let yellowbtn = document.getElementById("yellowbtn");
+let bluebtn = document.getElementById("bluebtn");
+
+let seabtn = document.getElementById("seabtn");
+let mountainbtn = document.getElementById("mountainbtn");
+
+
+
+bluebtn.addEventListener("click", function() {
+document.body.style.backgroundImage = "none";
+document.body.classList.add("bg-cyan-500");
+document.body.classList.remove("bg-yellow-500");
+});
+
+yellowbtn.addEventListener("click", function() {
+document.body.style.backgroundImage = "none";
+document.body.classList.remove("bg-cyan-500");
+document.body.classList.add("bg-yellow-500");
+});
+
+let arkaplanlar = ["imgs/sea.jpg","imgs/mountain.jpg"];
+
+seabtn.addEventListener("click", function() {
+document.body.style.backgroundImage = "url(" + arkaplanlar[0] + ")";
+document.body.style.backgroundSize = "100% 100%";
+})
+
+mountainbtn.addEventListener("click", function() {
+document.body.style.backgroundImage = "url(" + arkaplanlar[1] + ")";
+document.body.style.backgroundSize = "100% 100%";
+})
+
+</script>
+
+</body>
+</html>
